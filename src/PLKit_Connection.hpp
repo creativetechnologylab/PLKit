@@ -95,7 +95,8 @@ public:
     Serial.print(SEND_SEP);
   }
 
-  void log(const char *message) {
+  template <typename T>
+  void log(T message) {
     Serial.print("{");
     Serial.print(message);
     Serial.print("}");
